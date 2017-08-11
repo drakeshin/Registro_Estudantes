@@ -6,6 +6,7 @@
 package registroaluno;
 
 import java.util.Calendar;
+import java.util.LinkedList;
 
 /**
  *
@@ -14,12 +15,38 @@ import java.util.Calendar;
 public class Materia {
     private int id;
     private String curso;
-    private Calendar calendario;
-    private double mensalidade;
-    public int materiasAprovado = 0;
+    private Calendar calendario; // Não implementado ainda
+    private double mensalidade; // ainda será implementado
+    public int materiasAprovado = 0; //mesma situ.....talvez eu exclua U.U
+    private LinkedList listaMateria; //blablabla umas lógicas ae
+ 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getMateriasAprovado() {
+        return materiasAprovado;
+    }
+
+    public void setMateriasAprovado(int materiasAprovado) {
+        this.materiasAprovado = materiasAprovado;
+    }
+
+    public LinkedList getListaMateria() {
+        return listaMateria;
+    }
+
+    public void setListaMateria(LinkedList listaMateria) {
+        this.listaMateria = listaMateria;
+    }
     
     
-    public Materia(){}
+    public Materia(){}//implementar viu =D
 
     public int getID() {
         return id;

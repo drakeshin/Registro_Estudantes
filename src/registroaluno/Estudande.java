@@ -28,6 +28,9 @@ public class Estudande {
         setTelefone(eTelefone);
         setCEP(eCep);
     }
+    
+    //tester
+    public Estudande(){}
 
     public int getID() {
         return ID;

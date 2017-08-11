@@ -30,9 +30,13 @@ public class Main extends javax.swing.JFrame {
         MainPanel = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaAlunos = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        CursosTable = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,7 +50,22 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TabelaAlunos);
 
-        MainPanel.addTab("tab1", jScrollPane1);
+        MainPanel.addTab("Aluno", jScrollPane1);
+
+        CursosTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Curso"
+            }
+        ));
+        jScrollPane2.setViewportView(CursosTable);
+
+        MainPanel.addTab("Cursos", jScrollPane2);
 
         jMenu1.setText("Alunos");
 
@@ -54,6 +73,13 @@ public class Main extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Materia");
+
+        jMenuItem2.setText("Registrar");
+        jMenu2.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -71,8 +97,10 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        MainPanel.getAccessibleContext().setAccessibleName("TabelaTab");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -113,11 +141,15 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable CursosTable;
     private javax.swing.JTabbedPane MainPanel;
     private javax.swing.JTable TabelaAlunos;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
